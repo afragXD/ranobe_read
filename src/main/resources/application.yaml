@@ -1,0 +1,14 @@
+ktor:
+    application:
+        modules:
+            - com.ranobe_read.ApplicationKt.module
+    deployment:
+        port: 8080
+        sslPort: 443
+        #disableHttp2: true
+    security:
+        ssl:
+            keyStore: src\main\resources\crt\keystore.jks
+            keyAlias: "myalias"
+            keyStorePassword: "changeit"
+            privateKeyPassword: "changeit"
